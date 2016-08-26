@@ -15,19 +15,36 @@ Resolving github.com (github.com)... 192.30.252.32
 
 Unarchive the downloaded file.
 
-$ tar -zxvf Titacoin-linux.tar.gz 
+$ sudo apt-get install unzip
 
-Titacoin-linux/
-Titacoin-linux/configs/
-Titacoin-linux/Titacoind
-Titacoin-linux/simplewallet
-Titacoin-linux/walletd
+$ mv "master.zip" "titacoin.zip"
+
+$ unzip titacoin.zip 
+
+  creating: titacoin-node-master/
+  inflating: titacoin-node-master/.gitattributes
+  inflating: titacoin-node-master/.gitignore
+  inflating: titacoin-node-master/README
+   creating: titacoin-node-master/nix/
+   creating: titacoin-node-master/nix/configs/
+  inflating: titacoin-node-master/nix/configs/titacoin.conf
+  inflating: titacoin-node-master/nix/forknoted
+  inflating: titacoin-node-master/nix/simplewallet
+  inflating: titacoin-node-master/nix/walletd
+   creating: titacoin-node-master/windows/
+   creating: titacoin-node-master/windows/configs/
+  inflating: titacoin-node-master/windows/configs/titacoin.conf
+  inflating: titacoin-node-master/windows/forknoted.exe
+  inflating: titacoin-node-master/windows/run.bat
+  inflating: titacoin-node-master/windows/simplewallet.exe
+  inflating: titacoin-node-master/windows/walletd.exe
+
 ...
 Saving the configuration file
 
 Log into the Titacoin directory
 
-$ cd Titacoin-linux
+$ cd titacoin-node-master/nix
 Write your configuration file
 
 $ cat >configs/titacoin.conf 
@@ -74,7 +91,7 @@ description "titacoin daemon"
 start on runlevel [23]
 stop on shutdown
 
-exec sudo -u tita /home/tita/Titacoin-linux/Titacoind --no-console --config-file /home/tita/Titacoin-linux/configs/titacoin.conf
+exec sudo -u tita /home/tita/titacoin-node-master/Titacoind --no-console --config-file /home/tita/titacoin-node-master/configs/titacoin.conf
 
 post-stop exec sleep 30
 
