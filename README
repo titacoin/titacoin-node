@@ -53,7 +53,7 @@ description "titacoin daemon"
 start on runlevel [23]
 stop on shutdown
 
-exec sudo -u tita /home/tita/titacoin-node-master/Titacoind --no-console --config-file /home/tita/titacoin-node-master/configs/titacoin.conf
+exec sudo -u tita /home/tita/titacoin-node-master/titacoind --no-console --config-file /home/tita/titacoin-node-master/configs/titacoin.conf
 
 post-stop exec sleep 30
 
