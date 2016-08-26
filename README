@@ -46,7 +46,7 @@ Log with root user and change the directory to /etc/init/.
 $ cd /etc/init
 Create the upstart config file.
 
-$ cat >Titacoin-titacoin-daemon.conf 
+$ cat >titacoin-daemon.conf 
 
 description "titacoin daemon"
 
@@ -62,9 +62,9 @@ respawn limit 5 30
 
 Start the service.
 
-$ start Titacoin-titacoin-daemon 
+$ start titacoin-daemon 
 You now have your seed node up and running. It will automatically restart if something goes wrong.
 
 Stopping the service.
 
-$ stop Titacoin-titacoin-daemon 
+$ stop titacoin-daemon 
