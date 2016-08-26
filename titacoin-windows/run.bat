@@ -1,0 +1,1 @@
+forknoted.exe --config configs/titacoin.conf 
