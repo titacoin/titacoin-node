@@ -3,9 +3,13 @@ Installing Titacoin
 Once you connect to the VPS, create and log into user tita.
 
 $ useradd -m tita
+
 $ su tita
+
 $ cd ~
+
 Now you can download Titacoin.
+
 
 $ wget https://github.com/titacoin/titacoin-node/archive/master.zip
 
